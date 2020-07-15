@@ -4,6 +4,10 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;500;700&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="css/style.min.css" />
   </head>
   <body>
@@ -13,7 +17,7 @@
           <a class="logo" href="#">
             <picture class="logo_img">
               <source
-                srcset="images/logo-mobile.png"
+                srcset="images/logo_mobile.png"
                 media="(max-width: 640px)"
               />
               <img src="images/logo.png" alt="Logo" />
@@ -48,40 +52,50 @@
       </div>
     </header>
     <section class="page-section top">
-      <div class="conteiner">
-        <div class="top_inner">
-          <h1 class="top_title"></h1>
-          <img src="images/mavic.png" alt="Mavic" />
-          <p class="top_text">
-            Квадрокоптер Dji Mavic 2 Pro с профессиональной камерой Hasselblad
-          </p>
-          <ul class="top_social-list">
-            <li class="top_social-item">
-              <a class="top_social-link" href="">
-                <img src="images/facebook.png" alt="Facebook" />
-              </a>
-            </li>
-            <li class="top_social-item">
-              <a class="top_social-link" href="">
-                <img src="images/youtube.png" alt="Youtube" />
-              </a>
-            </li>
-            <li class="top_social-item">
-              <a class="top_social-link" href="">
-                <img src="images/instagram.png" alt="instagram" />
-              </a>
-            </li>
-          </ul>
+      <div class="page-section_wrapper top_wrapper">
+        <div class="conteiner">
+          <div class="top_inner">
+            <h1 class="top_title">Mavic 2 Pro</h1>
+
+            <picture class="logo_img">
+              <source
+                srcset="images/mavic_mobile.png"
+                media="(max-width: 640px)"
+              />
+              <img src="images/mavic.png" alt="Mavic" />
+            </picture>
+            <p class="top_text">
+              Квадрокоптер Dji Mavic 2 Pro с профессиональной камерой Hasselblad
+            </p>
+            <ul class="top_social-list">
+              <li class="top_social-item">
+                <a class="top_social-link" href="">
+                  <img src="images/facebook.svg" alt="Facebook" />
+                </a>
+              </li>
+              <li class="top_social-item">
+                <a class="top_social-link" href="">
+                  <img src="images/youtube.svg" alt="Youtube" />
+                </a>
+              </li>
+              <li class="top_social-item">
+                <a class="top_social-link" href="">
+                  <img src="images/instagram.svg" alt="instagram" />
+                </a>
+              </li>
+            </ul>
+          </div>
         </div>
-      </div>
-      <div class="scroll_btn">
-        <a href="#products" class="a-btn">
-          <img src="images/arrow_down.png" alt="Arrowdown"
-        /></a>
+        <div class="scroll_btn">
+          <a href="#products" class="a-btn">
+            <img src="images/arrow_down.png" alt="Arrowdown"
+          /></a>
+        </div>
       </div>
     </section>
 
-    <section id="products" class="page-section products">
+    <div id="products" class="page-section products">
+        <div class="page-section_wrapper">
       <div class="conteiner">
         <h3 class="title products_title">
           Что такое Mavic 2 Pro?
@@ -103,7 +117,7 @@
           </div>
           <div class="products_slider-box">
             <p class="products_slider-text">
-              Лудшая беспилотная технодогия аеросьемки
+              Лудшая беспилотная технология аеросьемки
             </p>
             <div class="products_slider">
               <div class="products_slider-item">
@@ -157,9 +171,11 @@
           <img src="images/arrow_down.png" alt="Arrowdown"
         /></a>
       </div>
+    </div>
     </section>
 
     <section id="benefits" class="page-section benefits">
+        <div class="page-section_wrapper">
       <div class="conteiner">
         <h3 class="title">Преимущества</h3>
         <div class="benefits_items">
@@ -234,9 +250,11 @@
           <img src="images/arrow_down.png" alt="Arrowdown"
         /></a>
       </div>
+      </div>
     </section>
 
     <section id="specification" class="page-section specification">
+        <div class="page-section_wrapper">
       <div class="conteiner">
         <h3 class="title">Характеристики</h3>
         <div class="specification_inner">
@@ -284,9 +302,11 @@
           <img src="images/arrow_down.png" alt="Arrowdown"
         /></a>
       </div>
+      </div>
     </section>
 
     <section id="questions" class="page-section questions">
+        <div class="page-section_wrapper">
       <div class="conteiner">
         <h3 class="title">Остались вопросы?</h3>
         <div class="questions_items">
@@ -341,9 +361,11 @@
           <img src="images/arrow_down.png" alt="Arrowdown"
         /></a>
       </div>
+      </div>
     </section>
 
     <section id="contacts" class="page-section contacts">
+        <div class="page-section_wrapper">
       <div class="conteiner">
         <h3 class="title">Контакты</h3>
         <div class="contacts_inner">
@@ -424,7 +446,9 @@
       </div>
       <div class="scroll_btn">
         <a href="#" class="a-btn">
-            <img src="images/arrow_down.png" alt="Arrowdown"/></a>
+          <img src="images/arrow_down.png" alt="Arrowdown"
+        /></a>
+      </div>
       </div>
     </section>
 
@@ -436,6 +460,7 @@
       </div>
     </footer>
 
+   
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="js/libs.min.js"></script>
     <script src="js/main.js"></script>
