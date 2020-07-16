@@ -20,6 +20,8 @@
     "normalize.css": "^8.0.1"
   },
   "dependencies": {
+    "kind-of": "^6.0.3",
+    "lodash": "^4.17.19",
     "magnific-popup": "^1.1.0",
     "slick-carousel": "^1.8.1"
   }
