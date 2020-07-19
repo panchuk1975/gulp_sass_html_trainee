@@ -160,8 +160,6 @@
   svg {
     stroke: #000;
   }
-  &__left {
-  }
   &__right {
     right: 60px;
   }
@@ -187,43 +185,50 @@
       margin-left: 40px;
       transform: translateY(25px);
     }
-  }
-  &_item-1,
-  &_item-3 {
-    position: relative;
-    &::before,
-    &::after {
-      content: "";
-      position: absolute;
-      background-repeat: no-repeat;
-      background-position: 0 0;
+    &:nth-child(3) {
+      margin-left: 30px;
+    }
+    &:nth-child(4) {
+      margin-left: 40px;
+    }
+    &:first-child,
+    &:nth-child(3) {
+      position: relative;
+      &::before,
+      &::after {
+        content: "";
+        position: absolute;
+        background-repeat: no-repeat;
+        background-position: 0 0;
+      }
+    }
+    &:first-child {
+      &::before {
+        height: 48px;
+        width: 245px;
+        background-image: url("../images/1-2.png");
+        right: -63px;
+        top: 31px;
+      }
+    }
+    &:nth-child(3) {
+      &::before {
+        width: 254px;
+        height: 39px;
+        top: 65px;
+        right: -55px;
+        background-image: url("../images/3-4.png");
+      }
+      &::after {
+        width: 463px;
+        height: 62px;
+        top: -70px;
+        right: -54px;
+        background-image: url("../images/2-3.png");
+      }
     }
   }
-  &_item-1 {
-    &::before {
-      height: 48px;
-      width: 245px;
-      background-image: url("../images/1-2.png");
-      right: -63px;
-      top: 31px;
-    }
-  }
-  &_item-3 {
-    &::before {
-      width: 254px;
-      height: 39px;
-      top: 65px;
-      right: -55px;
-      background-image: url("../images/3-4.png");
-    }
-    &::after {
-      width: 463px;
-      height: 62px;
-      top: -70px;
-      right: -54px;
-      background-image: url("../images/2-3.png");
-    }
-  }
+
   &_num {
     line-height: 41px;
     font-size: 36px;
@@ -257,6 +262,143 @@
   &_info_text {
     font-size: 15px;
     line-height: 18px;
+  }
+}
+
+.specification {
+  &_inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 25px;
+  }
+  &_item-center {
+    margin-left: -15px;
+    margin-right: -15px;
+  }
+  &_box {
+    width: 280px;
+    position: relative;
+    margin-top: 10px;
+    &::before {
+      content: "";
+      position: absolute;
+      background-repeat: no-repeat;
+      background-position: 0 0;
+      background-size: contain;
+    }
+  }
+
+  &_box-2 {
+    margin-top: 140px;
+  }
+
+  &_box-4 {
+    margin-top: 160px;
+  }
+  &_box-1::before {
+    background-image: url("../images/pointer_1.svg");
+    width: 229px;
+    height: 114px;
+    right: -140px;
+    top: 16px;
+  }
+  &_box-2::before {
+    background-image: url("../images/pointer_2.svg");
+    width: 345px;
+    height: 81px;
+    right: -308px;
+    top: -65px;
+  }
+  &_box-3::before {
+    background-image: url("../images/pointer_3.svg");
+    width: 258px;
+    height: 103px;
+    left: -299px;
+    top: 16px;
+  }
+  &_box-4::before {
+    background-image: url("../images/pointer_4.svg");
+    width: 124px;
+    height: 89px;
+    left: -172px;
+    top: -73px;
+  }
+  &_box-title {
+    font-size: 21px;
+    line-height: 28px;
+    @extend %ubuntu-bold;
+    margin-bottom: 10px;
+  }
+  &_box-text {
+    font-weight: 300;
+    font-size: 15px;
+    line-height: 18px;
+  }
+}
+
+.questions {
+  &_items {
+    max-width: 757px;
+    padding-bottom: 15px;
+  }
+  &_item {
+    background-color: rgba(0, 0, 0, 0.3);
+    max-width: 690px;
+    position: relative;
+    &:nth-child(3)::before {
+        content: "";
+        position: absolute;
+        width: 319px;
+        height: 125px;
+        top: -33px;
+        right: -386px;
+        background-image: url('../images/half_mavic.png');
+    }
+  }
+  &_item-title {
+    min-width: 690px;
+    line-height: 28px;
+    font-size: 21px;
+    @extend %ubuntu-medium;
+    background-color: rgba(0, 0, 0, 0.3);
+    color: rgba(#fff, 0.8);
+    padding: 20px 40px 20px 40px;
+    margin-bottom: 4px;
+    position: relative;
+    cursor: pointer;
+    &::after {
+      content: url("../images/arrov-down.svg");
+      position: absolute;
+      width: 72px;
+      height: 67px;
+      background-color: #fff;
+      right: -72px;
+      top: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+  &_item-text {
+    padding: 0 5px 0 50px;
+    font-size: 15px;
+    line-height: 22px;
+    margin: 0 0 4px;
+    display: none;
+    //visibility: hidden;
+    //transition: all .3s;;
+  }
+  &_item.questions_item-active {
+    .questions_item-title::after {
+      transform: rotate(180deg);
+    }
+    .questions_item-text {
+      //visibility: visible;
+      display: block;
+      height: 100%;
+      padding: 0 5px 75px 50px;
+    }
   }
 }
 
