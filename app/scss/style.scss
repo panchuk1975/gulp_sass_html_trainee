@@ -347,13 +347,13 @@
     max-width: 690px;
     position: relative;
     &:nth-child(3)::before {
-        content: "";
-        position: absolute;
-        width: 319px;
-        height: 125px;
-        top: -33px;
-        right: -386px;
-        background-image: url('../images/half_mavic.png');
+      content: "";
+      position: absolute;
+      width: 319px;
+      height: 125px;
+      top: -33px;
+      right: -386px;
+      background-image: url("../images/half_mavic.png");
     }
   }
   &_item-title {
@@ -399,6 +399,125 @@
       height: 100%;
       padding: 0 5px 75px 50px;
     }
+  }
+}
+
+.contacts {
+  &_inner {
+    display: flex;
+    padding-left: 25px;
+  }
+  &_info {
+    width: 240px;
+    margin-right: 60px;
+  }
+  &_info_box {
+    margin-bottom: 30px;
+  }
+  &_info-title {
+    line-height: 24px;
+    font-size: 21px;
+    @extend %ubuntu-bold;
+    margin: 10px 0 0 0;
+  }
+  &_info-email {
+    line-height: 74px;
+    font-size: 21px;
+    @extend %ubuntu-bold;
+    margin: 0 0 13px;
+  }
+  &_info_phone,
+  &_info-email {
+    font-size: 15px;
+    line-height: 18px;
+  }
+  &_info-email:hover {
+    text-decoration: underline;
+  }
+  &_form {
+    width: 570px;
+    margin-right: 106px;
+  }
+  &_form-title {
+    line-height: 24px;
+    font-size: 21px;
+    @extend %ubuntu-bold;
+    margin: 0 0 13px;
+  }
+  &_form-text {
+    font-size: 15px;
+    line-height: 18px;
+    margin: 0 0 12px;
+  }
+  &_form-line {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+  }
+  &_form-input,
+  &_form-textarea {
+    border: none;
+    background: rgba(0, 0, 0, 0.5);
+    @extend %ubuntu-regular;
+    padding: 15px;
+    font-size: 13px;
+    line-height: 15px;
+    &::plaseholder {
+      color: rgba (#fff, 0.4);
+    }
+  }
+  &_form-input {
+    width: 49%;
+  }
+  &_form-textarea {
+    min-height: 144px;
+    width: 100%;
+    resize: none;
+  }
+  &_form-btn {
+    text-transform: uppercase;
+    font-size: 14px;
+    line-height: 16px;
+    letter-spacing: 0.03em;
+    @extend %ubuntu-bold;
+    border: 1px solid #ffffff;
+    border-radius: 2px;
+    padding: 9px 15px;
+    color: #fff;
+    background-color: transparent;
+    cursor: pointer;
+    transition: all 0.3s;
+    &:hover {
+      background-color: #fff;
+      color: #000;
+    }
+  }
+  &_sosial-list {
+    display: flax;
+    flex-direction: column;
+    justify-content: center;
+  }
+  &_social-item {
+    margin: 14px 0;
+  }
+  &_social-link {
+    opacity: 0.5;
+    &:hover {
+      opacity: 1;
+    }
+  }
+}
+
+.footer {
+  position: absolute;
+  bottom: 32px;
+  left: 0;
+  right: 0;
+  &_copy {
+    text-align: right;
+    font-size: 13px;
+    line-height: 15px;
+    color: rgba(#fff, 0.64);
   }
 }
 
